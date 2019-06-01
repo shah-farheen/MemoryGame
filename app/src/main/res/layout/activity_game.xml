@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.GameActivity">
+
+    <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_tile"
+            tools:itemCount="10"
+            app:spanCount="6"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    />
+
+    <Button
+            android:id="@+id/btn_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            tools:text="Pause"
+    />
+
+</LinearLayout>
